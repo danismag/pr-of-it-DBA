@@ -1,0 +1,16 @@
+1.2
+
+CREATE TABLE `books` (
+    `id` SERIAL,
+    `title` VARCHAR(200),
+    `author` VARCHAR(200),
+    `year` INT UNSIGNED,
+    `price` NUMERIC(6,2)    
+);
+
+CREATE TABLE `publishers` (
+    `id` SERIAL,
+    `name` VARCHAR(200),
+    `city` VARCHAR(100),
+    `description` TEXT
+);
