@@ -1,0 +1,88 @@
+Пункт 1:
+
+CREATE TABLE `books` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`title`	TEXT,
+	`author` TEXT,
+	`year`	INTEGER,
+	`price`	REAL
+);
+
+CREATE TABLE `publishers` (
+    `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+    `name` TEXT,
+    `city` TEXT,
+    `description` TEXT
+);
+
+Пункт 2:
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Война и мир', 'Лев Николаевич Толстой', 1971, 975.00
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Преступление и наказание', 'Федор Михайлович Достоевский', 1993, 321.30
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Вишневый сад', 'Антон Павлович Чехов', 1998, 163.90
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Властелин колец', 'Дж. Р. Р. Толкин', 2005, 599.90
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Хоббит, или Туда и Обратно', 'Дж. Р. Р. Толкин', 2009, 385.00
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Басни', 'Иван Андреевич Крылов', 1997, 288.40
+);
+
+INSERT INTO `books` 
+    (`title`, `author`, `year`, `price`)
+    VALUES (
+        'Сильмариллион', 'Дж. Р. Р. Толкин', 2010, 359.90
+);
+
+Пункт 3:
+
+Все книги определенного автора:
+
+SELECT * 
+    FROM `books` 
+    WHERE `author` = 'Дж. Р. Р. Толкин'; 
+
+Все книги ценой не более 500 руб:
+
+SELECT * 
+    FROM `books` 
+    WHERE `price` <= 500.00;
+
+Заглавия книг (и год издания) определенного автора, отсортированные по году их издания:
+
+SELECT `title`, `year` 
+    FROM `books` 
+    WHERE `author` = 'Дж. Р. Р. Толкин' 
+    ORDER BY `year`;
+
+Имена авторов книг, вышедших в 1990-е годы:
+
+SELECT `author`
+    FROM `books`
+    WHERE `year` BETWEEN 1990 AND 1999;
+
