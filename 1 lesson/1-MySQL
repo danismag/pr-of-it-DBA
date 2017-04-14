@@ -5,14 +5,16 @@ CREATE TABLE `books` (
     `title` VARCHAR(200),
     `author` VARCHAR(200),
     `year` INT UNSIGNED,
-    `price` NUMERIC(6,2)    
+    `price` NUMERIC(6,2),
+    PRIMARY KEY (`id`)   
 );
 
 CREATE TABLE `publishers` (
     `id` SERIAL,
     `name` VARCHAR(200),
     `city` VARCHAR(100),
-    `description` TEXT
+    `description` TEXT,
+    PRIMARY KEY (`id`)   
 );
 
 Пункт 2:
