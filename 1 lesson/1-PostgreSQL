@@ -2,16 +2,16 @@
 
 CREATE TABLE "books" (
     "id" SERIAL,
-    "title" VARCHAR(200),
-    "author" VARCHAR(200),
+    "title" CHARACTER VARYING(200),
+    "author" CHARACTER VARYING(200),
     "year" INT,
     "price" MONEY    
 );
 
 CREATE TABLE "publishers" (
     "id" SERIAL,
-    "name" VARCHAR(200),
-    "city" VARCHAR(100),
+    "name" CHARACTER VARYING(200),
+    "city" CHARACTER VARYING(100),
     "description" TEXT
 );
 
