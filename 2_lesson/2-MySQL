@@ -1,0 +1,39 @@
+Пункт 1:
+
+CREATE TABLE `goods` (
+    `id` SERIAL PRIMARY KEY,
+    `name` VARCHAR(200) NOT NULL,
+    `vendor_code` VARCHAR(100) NOT NULL UNIQUE,
+    `image` VARCHAR(100),
+    `price` DECIMAL(7,2),
+    `sale_from` DATE,
+    `amount` INT UNSIGNED,
+    `description` TEXT
+);
+
+Пункт 2:
+
+INSERT INTO `goods`
+    (`name`, `vendor_code`, `price`, `sale_from`, `amount`)
+    VALUES 
+    ('Стул деревянный', '785793', 2864.50, '2017-02-15', 5);
+
+INSERT INTO `goods`
+    (`name`, `vendor_code`, `price`, `sale_from`, `amount`)
+    VALUES 
+    ('Шкаф платяной', '201Дв56С', 12800.00, '2016-12-07', 1);
+
+INSERT INTO `goods`
+    (`name`, `vendor_code`, `price`, `sale_from`, `amount`)
+    VALUES 
+    ('Шуруп 3х30 мм', '523.5547.54', 3.50, '2017-01-01', 550);
+
+INSERT INTO `goods`
+    (`name`, `vendor_code`, `price`, `sale_from`, `amount`)
+    VALUES 
+    ('Тетрадь 48 листов', '48-8579', 13.60, '2017-03-27', 140);
+
+INSERT INTO `goods`
+    (`name`, `vendor_code`, `price`, `sale_from`, `amount`)
+    VALUES 
+    ('Карандаш НВ', '565623', 9.85, '2017-02-13', 56);
